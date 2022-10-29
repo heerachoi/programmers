@@ -1,3 +1,5 @@
+// 문제 링크 & 코드 리뷰: https://codesign.tistory.com/208
+
 function solution(s) {
   var answer = [];
   for (let i = 0; i < s.length; i++) {
