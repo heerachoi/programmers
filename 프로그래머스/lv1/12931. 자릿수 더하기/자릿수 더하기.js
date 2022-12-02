@@ -1,4 +1,4 @@
 function solution(n)
 {
-    return [...(n+"")].reduce((acc,val,index) => acc + Number(val), 0);
+    return [...(n+"")].reduce((acc, val,index) => acc + parseInt(val), 0);
 }
