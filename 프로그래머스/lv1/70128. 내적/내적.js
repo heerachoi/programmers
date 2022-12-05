@@ -1,4 +1,3 @@
 function solution(a, b) {
-    var answer = a.reduce((acc, val, index) => acc + (val * b[index]),0);
-    return answer;
+    return  a.reduce((acc, curr, index) => acc + curr * b[index],0);;
 }
