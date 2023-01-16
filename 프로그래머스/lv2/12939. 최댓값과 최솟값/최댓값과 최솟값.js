@@ -1,4 +1,4 @@
 function solution(s) {
-    var answer = s.split(" ");
-    return Math.min(...answer) + " " + Math.max(...answer);
+    s = s.split(" ");
+    return Math.min(...s) + " " + Math.max(...s);
 }
