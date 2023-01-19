@@ -1,16 +1,14 @@
 function solution(N, stages) {
-    var answer = [];
-    var ppl = Array(N+1).fill(0);
-    var failure =  [];
-    var left = stages.length;
-    for (let i = 0; i < stages.length; i++) {
-        ppl[stages[i]]++;
+    let people = Array(N+1).fill(0);
+    let left = stages.length;
+    let result = [];
+    for (let i = 0; i < left; i++) {
+        people[stages[i]]++;
     }
-    for (let i = 1; i <= N+1; i++) {
-        failure.push([i, (ppl[i]/left)]);
-        left-=ppl[i];
+    for (let i = 1; i <= N; i++) {
+        result.push([i, people[i]/left]);
+        left-=people[i];
     }
-    failure.pop();
-    answer = failure.sort((a,b) => b[1] - a[1]);
-    return answer.map( a => a[0]);   
+    result.sort((a,b) => b[1] - a[1]);
+    return result.map((x) => x[0])
 }
