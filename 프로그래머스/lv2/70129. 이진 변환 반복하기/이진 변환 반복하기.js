@@ -1,11 +1,12 @@
 function solution(s) {
-    let answer = [0,0];
-    let oneString = "";
-    let sLength = 0;
-    while (s.length > 1) {
+    var answer = [0,0];
+    
+    while(s.length > 1) {
         answer[0]++;
-        answer[1] += (s.match(/0/g)||[]).length;
-        s = s.replace(/0/g, "").length.toString(2);
+        let remove = (s.split("").map((x) => Number(x)).filter((x) => x !== 0));
+        let cntZero = s.length - remove.length;
+        answer[1] += cntZero;
+        s = (remove.length).toString(2);        
     }
     return answer;
 }
