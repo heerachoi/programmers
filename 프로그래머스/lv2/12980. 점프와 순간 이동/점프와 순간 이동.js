@@ -1,4 +1,4 @@
 function solution(n)
 {
-    return n.toString(2).split("").filter((x) => x == 1).length;
+    return n.toString(2).replace(/0/g,"").length
 }
